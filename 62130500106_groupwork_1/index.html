@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Vue Js - HelloWorld App</title>
+
+  <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+  <!-- Using via Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- https://tailwindcss.com/docs/installation -->
+  <!-- Using Tailwind via CDN -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+  <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+  <!-- Vue CDN -->
+  <script src="https://unpkg.com/vue@next"></script>
+
+  <!-- https://fontawesome.com/ -->
+  <!-- Using Font awesome -->
+  <script src="https://kit.fontawesome.com/2e2c7f08b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="menubar" class="bg-blue-500 w-full h-10 flex flex-wrap justify-start">
+    <div class="flex w-12 h-10 p-2 hover:bg-blue-800">
+      <span class="material-icons content-center justify-center flex flex-wrap" style="color: azure;;">
+        menu
+      </span>
+    </div>
+    <div class="content-center justify-center flex flex-wrap items-center hover:bg-blue-800">
+      <h1 class="inline-block text-white px-5 font-semibold text-base font-system-ui">
+        Microsoft&nbsp;Azure
+      </h1>
+    </div>
+    <div class="w-20"></div>
+    <div class="content-center flex flex-wrap items-center w-2/4 ">
+      <div class="pl-1 h-6 bg-white rounded-sm ">
+        <i class="fas fa-search" style="color:black; transform: scaleX(1);"></i>
+        <input class="placeholder-blue-300" placeholder="Search resources, services, and docs (G+/)"
+          class="bg-white font-system-ui" size="98" style="color: black;">
+      </div>
+    </div>
+    <div class="content-center justify-center flex flex-wrap hover:bg-blue-800 w-12">
+      <i class="fas fa-terminal" style="color: azure;"></i>
+    </div>
+    <!-- <div class="w-6"></div> -->
+    <div class="content-center justify-center flex flex-wrap hover:bg-blue-800 w-12">
+      <i class="fas fa-filter" style="color: azure;"></i>
+    </div>
+    <!-- <div class="w-6"></div> -->
+    <div class="content-center justify-center flex flex-wrap hover:bg-blue-800 w-12">
+      <i class="far fa-bell" style="color: azure;"></i>
+    </div>
+    <!-- <div class="w-6"></div> -->
+    <div class="content-center justify-center flex flex-wrap hover:bg-blue-800 w-12">
+      <i class="fas fa-cog" style="color: azure;"></i>
+    </div>
+    <!-- <div class="w-6"></div> -->
+    <div class="content-center justify-center flex flex-wrap hover:bg-blue-800 w-12">
+      <i class="fas fa-question" style="color: azure;"></i>
+    </div>
+    <!-- <div class="w-6"></div> -->
+    <div class="content-center justify-center flex flex-wrap hover:bg-blue-800 w-12">
+      <i class="far fa-smile" style="color: azure;"></i>
+    </div>
+    <!-- <div class="w-6"></div> -->
+    <div class="flex hover:bg-blue-800">
+      <div class="content-center justify-center flex flex-wrap w-40">
+        <span class="truncate text-white text-xs">62130500106@ad.sit.kmutt.ac.th<br>KING MONGKUT'S UNIVERSITY</span>
+      </div>
+      <div class="content-center justify-center flex flex-wrap">
+        <i class="fas fa-user-circle" style="font-size: x-large;"></i>
+      </div>
+    </div>
+  </div>
+  <div class="mx-56">
+    <div class="h-8"></div>
+    <div class="h-8 text-lg font-semibold">Azure services</div>
+    <div class="h-3"></div>
+    <div class="flex space-x-7">
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl ">
+        <span class="material-icons text-blue-500" style="font-size: x-large;">
+          add
+        </span>
+        <span class="text-xs text-center text-blue-500">Create a resource</span>
+      </div>
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl">
+        <i class="fas fa-graduation-cap text-indigo-700	" style="font-size: x-large;"></i>
+        <span class="text-xs text-center">Education</span>
+      </div>
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl">
+        <i class="fas fa-key text-yellow-400" style="font-size: x-large;"></i>
+        <span class="text-xs text-center">Subscription</span>
+      </div>
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl">
+        <i class="fas fa-dollar-sign text-green-400" style="font-size: x-large;"></i>
+        <span class="text-xs text-center truncate">Cost <br>Management + Billing</span>
+      </div>
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl">
+        <i class="fas fa-th text-green-400	" style="font-size: x-large;"></i></i>
+        <span class="text-xs text-center">All resources</span>
+      </div>
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl">
+        <i class="fas fa-desktop text-blue-500" style="font-size: x-large;"></i>
+        <span class="text-xs text-center">Virtual machines</span>
+      </div>
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl">
+        <i class="fas fa-lock" style="font-size: x-large;"></i>
+        <span class="text-xs text-center truncate">Windows 10 <br>IoT Core Services</span>
+      </div>
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl">
+        <i class="fas fa-globe-europe text-blue-500" style="font-size: x-large;"></i>
+        <span class="text-xs text-center">App Services</span>
+      </div>
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl">
+        <i class="fas fa-memory text-green-600" style="font-size: x-large;"></i>
+        <span class="text-xs text-center">Storage accounts</span>
+      </div>
+      <div class="w-20 h-20 content-center justify-center flex flex-wrap items-center hover:shadow-xl">
+        <i class="fas fa-arrow-right text-blue-500" style="font-size: x-large;"></i>
+        <span class="text-xs text-center text-blue-500">More services</span>
+      </div>
+    </div>
+    <div>
+      <div class="h-8"></div>
+      <div class="h-8 text-lg font-semibold">Navigate</div>
+      <div class="h-8"></div>
+      <div class="flex space-x-7">
+        <div class="w-60 h-12 flex content-center flex-wrap hover:shadow-xl">
+          <i class="fas fa-key w-1/6 text-yellow-400" style="font-size: x-large;"></i>
+          <span class="text-xs w-5/6">Subscription</span>
+        </div>
+        <div class="w-60 h-12 flex content-center flex-wrap hover:shadow-xl">
+          <i class="fas fa-box text-blue-500" style="font-size: x-large;"></i>
+          <span class="text-xs w-5/6 pl-3">Resource groups</span>
+        </div>
+        <div class="w-60 h-12 flex content-center flex-wrap hover:shadow-xl">
+          <i class="fas fa-th text-green-400	" style="font-size: x-large;"></i></i>
+          <span class="text-xs w-5/6 pl-3">All resources</span>
+        </div>
+        <div class="w-60 h-12 flex content-center flex-wrap hover:shadow-xl">
+          <i class="fas fa-chart-line text-green-900" style="font-size: x-large;"></i>
+          <span class="text-xs w-5/6 pl-3">Dashboard</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="h-12"></div>
+      <div class="h-8 text-lg font-semibold">Tools</div>
+      <div class="h-8"></div>
+      <div class="flex space-x-7">
+        <div class="w-60 h-24 flex content-center flex-wrap hover:shadow-xl">
+          <div class="w-1/6"><i class="fas fa-book text-blue-500" style="font-size: x-large;"></i></div>
+          <div class="w-5/6">
+            <span class="text-xs w-5/6 text-blue-500">Microsoft Learn<br></span>
+            <span class="text-xs w-5/6">Learn Azure with free online<br>training from Microsoft</span>
+          </div>
+        </div>
+        <div class="w-60 h-24 flex content-center flex-wrap hover:shadow-xl">
+          <div class="w-1/6"><i class="fas fa-tachometer-alt text-blue-500" style="font-size: x-large;"></i></div>
+          <div class="w-5/6">
+            <span class="text-xs w-5/6 text-blue-500">Azure Monitor<br></span>
+            <span class="text-xs w-5/6">Monitor your app and<br>infrastructure</span>
+          </div>
+        </div>
+        <div class="w-60 h-24 flex content-center flex-wrap hover:shadow-xl">
+          <div class="w-1/6"><i class="fas fa-shield-alt text-green-400	" style="font-size: x-large;"></i></div>
+          <div class="w-5/6">
+            <span class="text-xs w-5/6 text-blue-500">Security Center<br></span>
+            <span class="text-xs w-5/6">Security your app and<br>infrastructure</span>
+          </div>
+        </div>
+        <div class="w-60 h-24 flex content-center flex-wrap hover:shadow-xl">
+          <div class="w-1/6"><i class="fas fa-dollar-sign text-green-400" style="font-size: x-large;"></i></div>
+          <div class="w-5/6">
+            <span class="text-xs w-5/6 text-blue-500">Cost Management<br></span>
+            <span class="text-xs w-5/6">Analyze and optimize your<br>cloud spend for free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="h-4"></div>
+      <div class="h-6 text-lg font-semibold">Usefull Links</div>
+      <div class="h-4"></div>
+      <div class="flex space-x-0">
+        <div class="w-56 h-24 flex content-center flex-col">
+          <a class="text-xs text-blue-500 hover:underline"
+            href="https://docs.microsoft.com/th-th/azure/?product=featured">
+            Technical Documentation
+          </a>
+          <a class="text-xs text-blue-500 hover:underline"
+            href="https://portal.azure.com/?Microsoft_Azure_Education_correlationId=9ca159f5-6db7-4782-85ea-7e53695b8028#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview">
+            Azure Migration Tools
+          </a>
+        </div>
+        <div class="w-56 h-24 flex content-center flex-col">
+          <a class="text-xs text-blue-500 hover:underline" href="https://azure.microsoft.com/en-us/services/">
+            Azure Services<br>
+          </a>
+          <a class="text-xs text-blue-500 hover:underline"
+            href="https://portal.azure.com/?Microsoft_Azure_Education_correlationId=9ca159f5-6db7-4782-85ea-7e53695b8028#blade/Microsoft_Azure_CustomerHub/ServiceProvidersBlade/overview">
+            Find an Azure expert
+          </a>
+        </div>
+        <div class="w-56 h-24 flex content-center flex-col">
+          <a class="text-xs text-blue-500 hover:underline" href="https://go.microsoft.com/fwlink/?linkid=2043134">
+            Recent Azure Updates<br>
+          </a>
+          <a class="text-xs text-blue-500 hover:underline"
+            href="https://portal.azure.com/?Microsoft_Azure_Education_correlationId=9ca159f5-6db7-4782-85ea-7e53695b8028#blade/Microsoft_Azure_Resources/QuickstartCenterBlade">
+            Quistart Center
+          </a>
+        </div>
+        <div class="w-64 h-24 flex-col flex">
+          <div class="h-6 text-lg font-semibold">Azure mobile app</div>
+          <div class="h-4"></div>
+          <div class="flex flex-row space-x-4">
+            <a href="https://apps.apple.com/app/microsoft-azure/id1219013620?ls=1"><img class="text-xs"
+                src="images/app store.png" width="116px" height="34px"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.microsoft.azure"><img class="text-xs"
+                src="images/play store.png" width="116px" height="34px"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- my main.js -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
